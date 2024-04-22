@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="number" id='thang'>
+<button onclick="xuLi()"> Tính số ngày</button>
+<p id="screen"></p>
+
+<script>
+function xuLi() {
+let thang = +document.getElementById('thang').value;
+switch (thang) {
+case 1:
+case 3:
+case 5:
+case 7:
+case 8:
+case 10:
+case 12:
+document.getElementById('screen').innerHTML = "Co 31 ngay";
+break;
+case 2:
+document.getElementById('screen').innerHTML = "Co 28 hoac 29 ngay";
+break;
+case 2:
+case 4:
+case 6:
+case 9:
+case 11:
+document.getElementById('screen').innerHTML = "Co 30 ngay";
+break;
+default: 
+document.getElementById('screen').innerHTML = "nhap lai";
+}
+}
+</script>
+
+</body>
+</html>
